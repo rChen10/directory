@@ -37,8 +37,8 @@ int main(){
       add_entry(dirs, data->d_name);
     }
     
-    if (data->d_type == DT_REG){
-      add_entry(dirs, data->d_name);
+    else if (data->d_type == DT_REG){
+      add_entry(regs, data->d_name);
       
       size += stat_size(data);
     }
